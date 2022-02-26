@@ -1,0 +1,84 @@
+
+:root {
+    --primary: #8c38ff;
+    --light: #EEEE;
+    --dark: #212121;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Nunito';
+}
+/* typography */
+h1 {
+    color: var(--light);
+    font-size: 1.5rem;
+    letter-spacing: 3px;
+}
+.adict {
+    color: var(--primary);
+}
+.container {
+    max-width: 1210px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav {
+    position: relative;
+    background-color: var(--dark);
+    border-bottom: var(--primary);
+    padding: 1.2em 0.8em;
+}
+.hamburger {
+    background-color: transparent;
+    border: none;
+    color: var(--light);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+.hamburger:hover {
+    transform: rotate(90deg);
+    transition-duration: 0.3s;
+}
+/* by default hide the menu */
+.menu {
+    display: none;
+
+}
+.menu a {
+    text-decoration: none;
+    color: var(--light);
+}
+.menu a:hover {
+    color: var(--primary);
+    transition: all 0.3s linear;
+}
+.show-links {
+    position: absolute;
+    top: 70px;
+    background-color: var(--dark);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    line-height: 60px;
+    right: 0;
+    text-align: center;
+   
+}
+@media (min-width: 768px){
+    .hamburger {
+        display: none;
+    }
+    .menu {
+        display: flex;
+    }
+    .menu a {
+        margin-left: 20px;
+    }
+}
