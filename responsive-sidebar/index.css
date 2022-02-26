@@ -1,0 +1,62 @@
+:root {
+    --dark: #222831;
+    --lightdark: #393E46;
+    --colorful: #00ADB5;
+    --light: #EEEEEE;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-family: 'Nunito', sans-serif;
+}
+h3, a {
+    color: var(--light);
+}
+h3 {
+    font-size: 1.3rem;
+}
+a {
+    font-size: 1rem;
+    text-decoration: none;
+}
+.app {
+    display: flex;
+    min-height: 100vh;
+}
+/* toggle menu */
+.menu-toggle {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
+}
+.hamburger {
+    font-size: 1.5rem;
+}
+/* styling sidebar */
+.sidebar {
+    padding: 2em 1em;
+    width: 40%;
+    max-width: 500px;
+    background-color: var(--dark);
+    /* it will hide the sidebar */
+    transform: translate(-100%);
+    transition: 0.3s ease-in;
+}
+.show-sidebar {
+    /* it will bring back the sidebar to where it was */
+    transform: translate(0);
+}
+.sidebar .menu {
+    display: flex;
+    flex-direction: column;
+}
+.menu-item {
+    width: 100%;
+    line-height: 60px;
+}
+.menu-item:hover {
+    border-right: 2px solid var(--colorful);
+    color: var(--colorful);
+}
